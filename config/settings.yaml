@@ -1,0 +1,35 @@
+# Project Configuration Settings
+
+# Model paths
+models:
+  detection: "models/model_a.pt"
+  segmentation: "models/model_b.pt"
+
+# Detection settings
+detection:
+  device: "cpu"  # or "0" for GPU
+  image_size: 640
+  confidence_threshold: 0.25
+  iou_threshold: 0.5
+
+# Reference detection
+reference:
+  size_mm: 20.0  # Standard reference square size in mm
+
+# Output directories
+outputs:
+  captured_images: "outputs/1_captured_images"
+  reference: "outputs/2_reference"
+  detection: "outputs/3_detection"
+  labels: "outputs/3_detection/labels"
+  masks: "outputs/4_segmentation/masks"
+  seg_overlay: "outputs/4_segmentation/overlay"
+  measurements: "outputs/5_measured"
+  spec_match_report: "outputs/6_results/spec_match_report"
+  output_images: "outputs/6_results/output_images"
+
+# Data paths
+data:
+  datasets: "data/datasets"
+  sample_images: "data/sample_images"
+  yolo_dataset: "data/yolo_dataset"
